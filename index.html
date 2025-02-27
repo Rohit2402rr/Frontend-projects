@@ -16,7 +16,203 @@
         <img src="./images/paper.png" />
       </div>
       <div class="choice" id="scissors">
-        <img src="./images/scissors.png" />
+        <img src="./images/scissors.png" />No code was selected, so I will provide a basic JavaScript code to implement the Rock Paper Scissors game logic. This code should be inserted in the app.js file.
+
+```javascript
+// Get the choice elements
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
+
+// Get the score elements
+const userScore = document.getElementById('user-score');
+const compScore = document.getElementById('comp-score');
+
+// Get the message element
+const msg = document.getElementById('msg');
+
+// Initialize scores
+let user = 0;
+let comp = 0;
+
+// Function to generate computer's choice
+function getComputerChoice() {
+  const choices = ['rock', 'paper', 'scissors'];
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+// Function to determine the winner
+function determineWinner(userChoice, compChoice) {
+  if (userChoice === compChoice) {
+    return 'It\'s a tie!';
+  }
+
+  if (userChoice === 'rock') {
+    if (compChoice === 'scissors') {
+      return 'Rock smashes scissors! You win!';
+    } else {
+      return 'Paper covers rock! You lose!';
+    }
+  }
+
+  if (userChoice === 'paper') {
+    if (compChoice === 'rock') {
+      return 'Paper covers rock! You win!';
+    } else {
+      return 'Scissors cuts paper! You lose!';
+    }
+  }
+
+  if (userChoice === 'scissors') {
+    if (compChoice === 'paper') {
+      return 'Scissors cuts paper! You win!';
+    } else {
+      return 'Rock smashes scissors! You lose!';
+    }
+  }
+}
+
+// Add event listeners to the choice elements
+rock.addEventListener('click', () => {
+  const compChoice = getComputerChoice();
+  const result = determineWinner('rock', compChoice);
+  msg.textContent = result;
+
+  if (result.includes('win')) {
+    user++;
+    userScore.textContent = user;
+  } else if (result.includes('lose')) {
+    comp++;
+    compScore.textContent = comp;
+  }
+});
+
+paper.addEventListener('click', () => {
+  const compChoice = getComputerChoice();
+  const result = determineWinner('paper', compChoice);
+  msg.textContent = result;
+
+  if (result.includes('win')) {
+    user++;
+    userScore.textContent = user;
+  } else if (result.includes('lose')) {
+    comp++;
+    compScore.textContent = comp;
+  }
+});
+
+scissors.addEventListener('click', () => {
+  const compChoice = getComputerChoice();
+  const result = determineWinner('scissors', compChoice);
+  msg.textContent = result;
+
+  if (result.includes('win')) {
+    user++;
+    userScore.textContent = user;
+  } else if (result.includes('lose')) {
+    comp++;
+    compScore.textContent = comp;
+  }
+});
+```No code was selected, so I will provide a basic JavaScript code to implement the Rock Paper Scissors game logic. This code should be inserted in the app.js file.
+
+```javascript
+// Get the choice elements
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
+
+// Get the score elements
+const userScore = document.getElementById('user-score');
+const compScore = document.getElementById('comp-score');
+
+// Get the message element
+const msg = document.getElementById('msg');
+
+// Initialize scores
+let user = 0;
+let comp = 0;
+
+// Function to generate computer's choice
+function getComputerChoice() {
+  const choices = ['rock', 'paper', 'scissors'];
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+// Function to determine the winner
+function determineWinner(userChoice, compChoice) {
+  if (userChoice === compChoice) {
+    return 'It\'s a tie!';
+  }
+
+  if (userChoice === 'rock') {
+    if (compChoice === 'scissors') {
+      return 'Rock smashes scissors! You win!';
+    } else {
+      return 'Paper covers rock! You lose!';
+    }
+  }
+
+  if (userChoice === 'paper') {
+    if (compChoice === 'rock') {
+      return 'Paper covers rock! You win!';
+    } else {
+      return 'Scissors cuts paper! You lose!';
+    }
+  }
+
+  if (userChoice === 'scissors') {
+    if (compChoice === 'paper') {
+      return 'Scissors cuts paper! You win!';
+    } else {
+      return 'Rock smashes scissors! You lose!';
+    }
+  }
+}
+
+// Add event listeners to the choice elements
+rock.addEventListener('click', () => {
+  const compChoice = getComputerChoice();
+  const result = determineWinner('rock', compChoice);
+  msg.textContent = result;
+
+  if (result.includes('win')) {
+    user++;
+    userScore.textContent = user;
+  } else if (result.includes('lose')) {
+    comp++;
+    compScore.textContent = comp;
+  }
+});
+
+paper.addEventListener('click', () => {
+  const compChoice = getComputerChoice();
+  const result = determineWinner('paper', compChoice);
+  msg.textContent = result;
+
+  if (result.includes('win')) {
+    user++;
+    userScore.textContent = user;
+  } else if (result.includes('lose')) {
+    comp++;
+    compScore.textContent = comp;
+  }
+});
+
+scissors.addEventListener('click', () => {
+  const compChoice = getComputerChoice();
+  const result = determineWinner('scissors', compChoice);
+  msg.textContent = result;
+
+  if (result.includes('win')) {
+    user++;
+    userScore.textContent = user;
+  } else if (result.includes('lose')) {
+    comp++;
+    compScore.textContent = comp;
+  }
+});
+```
       </div>
     </div>
 
